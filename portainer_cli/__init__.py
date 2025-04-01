@@ -356,7 +356,7 @@ class PortainerCLI(object):
         
         endpoint_id = endpoint_id or self.getDefaultEndpoint()
 
-        stack_url = 'stacks?type={}&method=string&endpointId={}'.format(
+        stack_url = 'stacks/create/swarm/string?type={}&endpointId={}'.format(
             1 if self.swarm_id is not None else 2,
             endpoint_id
         )
